@@ -1,2 +1,8 @@
 # IDEA based IDE specific settings
 .idea/
+
+# Compiled output
+Mouser/bin
+
+# Object data
+Mouser/obj
