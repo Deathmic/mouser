@@ -6,3 +6,9 @@ Mouser/bin
 
 # Object data
 Mouser/obj
+
+# NuGet packages
+packages
+
+# .user files
+*.user
