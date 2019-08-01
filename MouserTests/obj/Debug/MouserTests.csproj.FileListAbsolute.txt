@@ -1,9 +1,0 @@
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\bin\Debug\MouserTests.dll
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\bin\Debug\MouserTests.pdb
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\bin\Debug\nunit.framework.dll
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\bin\Debug\nunit.framework.xml
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\obj\Debug\MouserTests.csprojAssemblyReference.cache
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\obj\Debug\MouserTests.csproj.CoreCompileInputs.cache
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\obj\Debug\MouserTests.csproj.CopyComplete
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\obj\Debug\MouserTests.dll
-C:\Users\Michael\Dropbox\Dev\CSharp-Projects\mouser\MouserTests\obj\Debug\MouserTests.pdb
