@@ -12,3 +12,7 @@ packages
 
 # .user files
 *.user
+
+# C# compiler data and results
+*/bin/
+*/obj/
