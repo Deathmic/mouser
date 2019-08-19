@@ -13,8 +13,7 @@ namespace Mouser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var form = new FormMain();
-            if (!form.Disposing && !form.IsDisposed) Application.Run(form);
+            Application.Run(new MouserApplicationContext());
         }
     }
 }

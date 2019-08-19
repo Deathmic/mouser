@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 namespace Mouser
 {
     public class MouserSettings
@@ -13,5 +16,8 @@ namespace Mouser
         public int FixedMovePixels { get; set; } = 1;
         public int AccelerationTriggerMilliseconds { get; set; } = 200;
         public MoveModes MoveMode { get; set; } = MoveModes.Accelerating;
+
+        public Dictionary<Keys, Mouser.MouseActions> KeyActions { get; set; } =
+            new Dictionary<Keys, Mouser.MouseActions>();
     }
 }
