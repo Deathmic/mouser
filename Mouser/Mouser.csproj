@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="ExtensionMethods\Exceptions\String_Max_InvalidLengthException.cs" />
     <Compile Include="ExtensionMethods\StringExtensionMethods.cs" />
+    <Compile Include="FormMainViewModel.cs" />
     <Compile Include="ISettingsRepository.cs" />
     <Compile Include="KeyboardCapturers\IKeyboardCapturer.cs" />
     <Compile Include="KeyboardCapturers\KeyboardCapturer.cs" />

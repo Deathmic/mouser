@@ -1,3 +1,4 @@
+using System;
 using System.Windows.Forms;
 using Mouser.KeyboardCapturers;
 using Mouser.Loggers;
@@ -9,6 +10,7 @@ namespace Mouser
     public class MouserApplicationContext : ApplicationContext
     {
         private readonly Container _container;
+        private readonly FormMainViewModel _formMainViewModel;
         private readonly ILogger _logger;
         private readonly Mouser _mouser;
         private readonly ISettingsRepository _settingsRepository;
@@ -23,12 +25,26 @@ namespace Mouser
 
             var formMain = _container.GetInstance<FormMain>();
             formMain.Closed += (sender, args) => Exit();
-            formMain.Show();
+
+            _formMainViewModel = new FormMainViewModel(formMain) {Settings = _settingsRepository.Load()};
+            _formMainViewModel.MouserSignalSent += FormMainViewModelOnMouserSignalSent;
+            _formMainViewModel.ShowView();
         }
 
-        private MouserSettings LoadSettings()
+        private void FormMainViewModelOnMouserSignalSent(object sender, MouserSignalEventArgs e)
         {
-            return null; // TODO Implement
+            switch (e.Signal)
+            {
+                case Mouser.Signals.Start:
+                    _settingsRepository.Save(_formMainViewModel.Settings);
+                    _mouser.Start(_formMainViewModel.Settings);
+                    break;
+                case Mouser.Signals.Stop:
+                    _mouser.Stop();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         private void Exit()
