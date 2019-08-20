@@ -60,6 +60,12 @@ namespace Mouser
             Button7
         }
 
+        public enum Signals
+        {
+            Start,
+            Stop,
+        }
+
         private readonly IKeyboardCapturer _keyboardCapturer;
         private readonly ILogger _logger;
         private readonly IMouseWrapper _mouseWrapper;

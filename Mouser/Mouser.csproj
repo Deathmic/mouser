@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="Mouser.cs" />
     <Compile Include="MouserSettings.cs" />
+    <Compile Include="MouserSignalEventArgs.cs" />
     <Compile Include="MouseWrappers\IMouseWrapper.cs" />
     <Compile Include="MouseWrappers\User32_MouseEvent_MouseWrapper.cs" />
     <Compile Include="Program.cs" />
