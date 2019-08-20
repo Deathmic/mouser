@@ -11,6 +11,7 @@ namespace Mouser
         private readonly Container _container;
         private readonly ILogger _logger;
         private readonly Mouser _mouser;
+        private readonly ISettingsRepository _settingsRepository;
 
         public MouserApplicationContext()
         {
@@ -18,8 +19,7 @@ namespace Mouser
 
             _logger = _container.GetInstance<ILogger>();
             _mouser = _container.GetInstance<Mouser>();
-
-            _mouser.Start(LoadSettings() ?? new MouserSettings());
+            _settingsRepository = _container.GetInstance<ISettingsRepository>();
 
             var formMain = _container.GetInstance<FormMain>();
             formMain.Closed += (sender, args) => Exit();
@@ -47,6 +47,7 @@ namespace Mouser
             container.Register<IMouseWrapper, User32_MouseEvent_MouseWrapper>(Lifestyle.Singleton);
             container.Register<IKeyboardCapturer, KeyboardCapturer>(Lifestyle.Singleton);
             container.Register<ILogger, DebugLogger>(Lifestyle.Singleton);
+            container.Register<ISettingsRepository, JsonSettingsRepository>(Lifestyle.Singleton);
 
 #if DEBUG
             container.Verify();
